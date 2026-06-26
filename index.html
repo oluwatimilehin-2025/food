@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,6 +125,20 @@
             border-radius: 10px;
             transition: 0.3s;
         }
+      .food-item button{
+    background: orange;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.food-item button:hover{
+    background: #ff8c00;
+}
 
         .social-links a:hover {
             transform: translateY(-5px);
@@ -181,21 +196,84 @@
         <div class="menu-container">
 
             <div class="food-item">
-                <img src="pasta.png" alt="Creamy Pasta">
-                <h3>CREAMY PASTA</h3>
-                <p>Rich, creamy and full of flavour.</p>
-            </div>
+    <img src="pasta.png" alt="Creamy Pasta">
+    <h3>CREAMY PASTA</h3>
+    <p>Rich, creamy and full of flavour.</p>
+    <p class="price">₦8,500</p>
+    <button onclick="orderNow()">Order Now</button>
+</div>
 
             <div class="food-item">
                 <img src="burger.png" alt="Beef Burger">
                 <h3>BEEF BURGER</h3>
                 <p>Juicy, tasty and perfectly grilled.</p>
+                <p class="price">₦4,500</p> 
+                  <button onclick="orderNow()">Order Now</button>
             </div>
 
             <div class="food-item">
                 <img src="cake.png" alt="Chocolate Cake">
                 <h3>CHOCOLATE CAKE</h3>
                 <p>Sweet moments made better.</p>
+                <p class="price">₦8,000</p> 
+                  <button onclick="orderNow()">Order Now</button>
+            </div>
+<div class="food-item">
+                <img src="pizza.jpg" alt="pizza">
+                <h3>PIZZA</h3>
+                <p>A delicious pizza topped with rich tomato sauce, melted mozzarella cheese, and fresh herbs, baked to perfection.</p>
+                <p class="price">₦7,500</p> 
+                  <button onclick="orderNow()">Order Now</button>
+            </div>
+
+<div class="food-item">
+                <img src="fries.jpg" alt="Beef Burger">
+               <h3>LOADED FRIES</h3>
+<p>Golden fries topped with cheese, chicken chunks, and our signature sauce.</p>
+<p class="price">₦3,500</p>
+                
+                  <button onclick="orderNow()">Order Now</button>
+            </div>
+<div class="food-item">
+                <img src="sharwarma.jpg" alt="sharwarma">
+                <h3>SHARWARMA</h3>
+                <p>JSoft toasted wrap filled with juicy grilled chicken, fresh vegetables, and our creamy signature sauce for a delicious bite every time</p>
+                <p class="price">₦4,000</p> 
+                  <button onclick="orderNow()">Order Now</button>
+          
+                  
+
+            </div>
+
+            <div class="food-item">
+                <img src="waffles.jpg" alt="waffles">
+                <h3>WAFFLES</h3>
+                <p>Golden, fluffy waffles freshly made and served with maple syrup and a touch of butter.</p>
+                <p class="price">₦3,500</p> 
+                  <button onclick="orderNow()">Order Now</button>
+            </div>
+
+            <div class="food-item">
+                <img src="orange-juice.jpg" alt="juice">
+                <h3>ORANGE JUICE</h3>
+                <p>Refreshing juice made from freshly squeezed oranges.</p>
+                <p class="price">₦2,500</p> 
+                  <button onclick="orderNow()">Order Now</button>
+            </div>
+<div class="food-item">
+                <img src="strawberry.jpg" alt="milkshare">
+                <h3>STRAWBERRY</h3>
+                <p>Creamy milkshake blended with fresh strawberries and ice cream.</p>
+                 <p class="price">₦3,000</p>
+                  <button onclick="orderNow()">Order Now</button>
+            </div>
+
+<div class="food-item">
+                <img src="ice coffee.jpg" alt="coffee">
+                <h3>ICED COFFEE</h3>
+            <p>Cold brewed coffee served over ice with a touch of sweetness.</p>
+             <p class="price">₦2,500</p>
+                  <button onclick="orderNow()">Order Now</button>
             </div>
 
         </div>
@@ -210,7 +288,7 @@
 
         <div class="social-links">
 
-            <a href="https://wa.me/2348012345678"
+            <a href="https://wa.me/2347011690341"
                target="_blank" class="whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
                 <span>WhatsApp<br>07011690341</span>
@@ -239,21 +317,25 @@
 
 </body>
 <script>
-   
-    window.onload = function () {
-        alert("Welcome to BITE & DINE! Good Food, Good Mood.");
-    };
+   window.onload = function () {
+    alert("Welcome to BITE & DINE! Good Food, Good Mood.");
+};
 
+function orderNow() {
+    const phone = "2347011690341";
 
-    function orderNow() {
-        alert("Thank you for choosing BITE & DINE! Please contact us via WhatsApp to place your order.");
-    }
+    const message = encodeURIComponent(
+        "Hello BITE & DINE, I would like to place an order."
+    );
 
-    function showFood(foodName) {
-        alert("You selected: " + foodName);
-    }
+    window.open(
+        `https://wa.me/${phone}?text=${message}`,
+        "_blank"
+    );
+}
 </script>
-
+    
+</body>
 
 
 
