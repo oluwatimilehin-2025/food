@@ -125,15 +125,26 @@
             border-radius: 10px;
             transition: 0.3s;
         }
-      .food-item button{
+      .order-btn{
     background: orange;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 15px 30px;
+    font-size: 18px;
     font-weight: bold;
-    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.order-btn:hover{
+    background: #ff8c00;
+}
+
+.quantity{
+    width: 60px;
+    padding: 5px;
+    text-align: center;
 }
 
 .food-item button:hover{
@@ -191,93 +202,201 @@
 
 
     <div class="menu-section">
-        <h2>SOME OF OUR FAVOURITES</h2>
+    <h2>SOME OF OUR FAVOURITES</h2>
 
-        <div class="menu-container">
+```
+<div class="menu-container">
 
-            <div class="food-item">
-    <img src="pasta.png" alt="Creamy Pasta">
-    <h3>CREAMY PASTA</h3>
-    <p>Rich, creamy and full of flavour.</p>
-    <p class="price">₦8,500</p>
-    <button onclick="orderNow()">Order Now</button>
+    <div class="food-item">
+        <img src="pasta.png" alt="Creamy Pasta">
+        <h3>CREAMY PASTA</h3>
+        <p>Rich, creamy and full of flavour.</p>
+        <p class="price">₦8,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Creamy Pasta"
+                   data-price="8500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="burger.png" alt="Beef Burger">
+        <h3>BEEF BURGER</h3>
+        <p>Juicy, tasty and perfectly grilled.</p>
+        <p class="price">₦4,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Beef Burger"
+                   data-price="4500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="cake.png" alt="Chocolate Cake">
+        <h3>CHOCOLATE CAKE</h3>
+        <p>Sweet moments made better.</p>
+        <p class="price">₦8,000</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Chocolate Cake"
+                   data-price="8000">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="pizza.jpg" alt="Pizza">
+        <h3>PIZZA</h3>
+        <p>A delicious pizza topped with rich tomato sauce, melted mozzarella cheese, and fresh herbs.</p>
+        <p class="price">₦7,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Pizza"
+                   data-price="7500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="fries.jpg" alt="Loaded Fries">
+        <h3>LOADED FRIES</h3>
+        <p>Golden fries topped with cheese, chicken chunks, and our signature sauce.</p>
+        <p class="price">₦3,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Loaded Fries"
+                   data-price="3500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="sharwarma.jpg" alt="Shawarma">
+        <h3>SHAWARMA</h3>
+        <p>Soft toasted wrap filled with juicy grilled chicken, fresh vegetables, and creamy sauce.</p>
+        <p class="price">₦4,000</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Shawarma"
+                   data-price="4000">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="waffles.jpg" alt="Waffles">
+        <h3>WAFFLES</h3>
+        <p>Golden, fluffy waffles freshly made and served with maple syrup and butter.</p>
+        <p class="price">₦3,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Waffles"
+                   data-price="3500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="orange-juice.jpg" alt="Orange Juice">
+        <h3>ORANGE JUICE</h3>
+        <p>Refreshing juice made from freshly squeezed oranges.</p>
+        <p class="price">₦2,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Orange Juice"
+                   data-price="2500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="strawberry.jpg" alt="Strawberry Milkshake">
+        <h3>STRAWBERRY MILKSHAKE</h3>
+        <p>Creamy milkshake blended with fresh strawberries and ice cream.</p>
+        <p class="price">₦3,000</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Strawberry Milkshake"
+                   data-price="3000">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
+    <div class="food-item">
+        <img src="ice coffee.jpg" alt="Iced Coffee">
+        <h3>ICED COFFEE</h3>
+        <p>Cold brewed coffee served over ice with a touch of sweetness.</p>
+        <p class="price">₦2,500</p>
+
+        <label>
+            <input type="checkbox" class="food-check"
+                   data-name="Iced Coffee"
+                   data-price="2500">
+            Add to Order
+        </label>
+
+        <br><br>
+
+        <input type="number" class="quantity" value="1" min="1">
+    </div>
+
 </div>
 
-            <div class="food-item">
-                <img src="burger.png" alt="Beef Burger">
-                <h3>BEEF BURGER</h3>
-                <p>Juicy, tasty and perfectly grilled.</p>
-                <p class="price">₦4,500</p> 
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
+<br>
 
-            <div class="food-item">
-                <img src="cake.png" alt="Chocolate Cake">
-                <h3>CHOCOLATE CAKE</h3>
-                <p>Sweet moments made better.</p>
-                <p class="price">₦8,000</p> 
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
-<div class="food-item">
-                <img src="pizza.jpg" alt="pizza">
-                <h3>PIZZA</h3>
-                <p>A delicious pizza topped with rich tomato sauce, melted mozzarella cheese, and fresh herbs, baked to perfection.</p>
-                <p class="price">₦7,500</p> 
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
+<button class="order-btn" onclick="placeOrder()">
+    Order Selected Items 🍽️
+</button>
+```
 
-<div class="food-item">
-                <img src="fries.jpg" alt="Beef Burger">
-               <h3>LOADED FRIES</h3>
-<p>Golden fries topped with cheese, chicken chunks, and our signature sauce.</p>
-<p class="price">₦3,500</p>
-                
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
-<div class="food-item">
-                <img src="sharwarma.jpg" alt="sharwarma">
-                <h3>SHARWARMA</h3>
-                <p>JSoft toasted wrap filled with juicy grilled chicken, fresh vegetables, and our creamy signature sauce for a delicious bite every time</p>
-                <p class="price">₦4,000</p> 
-                  <button onclick="orderNow()">Order Now</button>
-          
-                  
-
-            </div>
-
-            <div class="food-item">
-                <img src="waffles.jpg" alt="waffles">
-                <h3>WAFFLES</h3>
-                <p>Golden, fluffy waffles freshly made and served with maple syrup and a touch of butter.</p>
-                <p class="price">₦3,500</p> 
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
-
-            <div class="food-item">
-                <img src="orange-juice.jpg" alt="juice">
-                <h3>ORANGE JUICE</h3>
-                <p>Refreshing juice made from freshly squeezed oranges.</p>
-                <p class="price">₦2,500</p> 
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
-<div class="food-item">
-                <img src="strawberry.jpg" alt="milkshare">
-                <h3>STRAWBERRY</h3>
-                <p>Creamy milkshake blended with fresh strawberries and ice cream.</p>
-                 <p class="price">₦3,000</p>
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
-
-<div class="food-item">
-                <img src="ice coffee.jpg" alt="coffee">
-                <h3>ICED COFFEE</h3>
-            <p>Cold brewed coffee served over ice with a touch of sweetness.</p>
-             <p class="price">₦2,500</p>
-                  <button onclick="orderNow()">Order Now</button>
-            </div>
-
-        </div>
-    </div>
+</div>
 
 
   
@@ -330,6 +449,45 @@ function orderNow() {
 
     window.open(
         `https://wa.me/${phone}?text=${message}`,
+        "_blank"
+    );
+}
+function placeOrder() {
+
+    let orderList = [];
+    let total = 0;
+
+    document.querySelectorAll(".food-check").forEach(item => {
+
+        if(item.checked){
+
+            let quantity =
+                item.closest(".food-item")
+                .querySelector(".quantity").value;
+
+            let price = Number(item.dataset.price);
+
+            total += price * quantity;
+
+            orderList.push(
+                `${item.dataset.name} x${quantity}`
+            );
+        }
+    });
+
+    if(orderList.length === 0){
+        alert("Please select at least one item.");
+        return;
+    }
+
+    let message =
+        "Hello BITE & DINE!%0A%0A" +
+        "My Order:%0A" +
+        orderList.join("%0A") +
+        `%0A%0ATotal: ₦${total.toLocaleString()}`;
+
+    window.open(
+        `https://wa.me/2347011690341?text=${message}`,
         "_blank"
     );
 }
